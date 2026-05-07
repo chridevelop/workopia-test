@@ -21,6 +21,6 @@ class file extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.file');
+        return view('components.inputs.file');
     }
 }

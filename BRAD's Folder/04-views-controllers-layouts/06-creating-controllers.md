@@ -50,7 +50,7 @@ Now that we have created our controller and added a method to it, we can use it 
 First, we need to import the `JobController` at the top of the file:
 
 ```php
-use App\Http\Controllers\JobController;
+
 ```
 
 Then, we can update the `/jobs` route to use the `index` method of the `JobController`:

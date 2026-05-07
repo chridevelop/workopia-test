@@ -21,6 +21,6 @@ class select extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.select');
+        return view('components.inputs.select');
     }
 }

@@ -21,6 +21,6 @@ class text extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.text');
+        return view('components.inputs.text');
     }
 }
