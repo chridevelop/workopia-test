@@ -7,12 +7,15 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BookmarksController;
+use App\Http\Controllers\ApplicantController;
+use App\Http\Controllers\GeocodeController;
 use Illuminate\Support\Facades\Route;
+
 
 // Αυτό το route θα στέλνει την αρχική σελίδα στον Controller
 // 1. Αρχική
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
+Route::get('/jobs/search', [JobController::class,'search'])->name('jobs.search');
 // 2. Λίστα (Index)
 Route::resource('/jobs', JobController::class)->middleware('auth')->only(['edit','create','destroy','update']);
 Route::resource('/jobs', JobController::class)->except(['edit','create','destroy','update']);
@@ -32,9 +35,12 @@ Route:: middleware('auth')->group(function() {
     Route::get('/bookmarks', [BookmarksController::class,'index'])->name('bookmarks.index');
     Route::POST('/bookmarks/{job}', [BookmarksController::class,'store'])->name('bookmarks.store');
     Route::DELETE('/bookmarks/{job}', [BookmarksController::class,'destroy'])->name('bookmarks.destroy');
+   });
+Route::POST('/jobs/{job}/apply', [ApplicantController::class,'store'])->name('applicant.store')->middleware('auth');
+Route::DELETE('/applicants/{applicant}/', [ApplicantController::class,'destroy'])->name('applicant.destroy')->middleware('auth');
 
-});
 
+Route::GET('/geocode', [GeocodeController::class,'geocode']);
 
 
 

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Applicant;
 use App\Models\User;
 use App\Models\Job;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -20,10 +21,12 @@ class DatabaseSeeder extends Seeder
         DB::table('job_listings')->truncate();
         DB::table('users')->truncate();
         DB::table('job_user_bookmarks')->truncate();
+        DB::table('applicants')->truncate();
 
         $this->call(TestUserSeeder::class);
         $this->call(RandomUserSeeder::class);
         $this->call(JobSeeder::class);
         $this->call(BookmarkSeeder::class);
+        //$this->call(Applicant::class);
     }
 }

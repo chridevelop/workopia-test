@@ -7,6 +7,5 @@
             {{$title}}
         </h2>
 
-
     </div>
 </section>
