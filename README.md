@@ -4,7 +4,7 @@ Built with Laravel following the Traversy Media
 "Laravel From Scratch" course.
 
 ## Tech Stack
-- PHP 8 / Laravel
+- PHP 8 / Laravel 12
 - PostgreSQL 
 - Blade Templates
 - Authentication
