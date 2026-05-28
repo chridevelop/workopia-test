@@ -5,7 +5,7 @@ Built with Laravel following the Traversy Media
 
 ## Tech Stack
 - PHP 8 / Laravel
-- MySQL
+- PostgreSQL 
 - Blade Templates
 - Authentication
 
